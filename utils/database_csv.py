@@ -8,6 +8,11 @@ name,author,read
 books_file = 'books.txt'
 
 
+def create_book_table():  # create_book_table() is a method to instantiate the books.txt file if the file is not existing so there won't be any error if user lists books without the file
+    with open(books_file, 'w'):
+        pass
+
+
 def add_book(book):
     with open(books_file, 'a') as file:  # 'a' mode - append mode for a file to add at the end
         file.write(f"{book['name']}, {book['author']}, 'False'\n")

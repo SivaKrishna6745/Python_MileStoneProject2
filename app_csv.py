@@ -48,6 +48,7 @@ operations = {
 
 
 def menu():
+    database_csv.create_book_table()
     user_input = input(USER_CHOICE)
     while user_input != 'q':
         operations[user_input]()
